@@ -21,6 +21,22 @@ $(document).ready(function() {
 		}
 	);
 
+	//change navbar background on scroll
+	$(window).on('scroll', function() {
+		let navbarContainer = $('.navbar-container');
+
+		if (this.pageYOffset >= navbarContainer.height()) {
+			navbarContainer.css('backgroundColor', '#1b262c00');
+
+			navbarContainer.css(
+				'backgroundImage',
+				'linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00)'
+			);
+		} else if (this.pageYOffset < navbarContainer.height()) {
+			navbarContainer.css('backgroundColor', '#1b262c');
+		}
+	});
+
 	//header text typing
 	$('.header-text').each(function() {
 		let headerH1 = $(this).find('h1'),
@@ -38,9 +54,6 @@ $(document).ready(function() {
 		//start typing
 		startTyping();
 		//start typing with the interval
-		setInterval(function() {
-			startTyping();
-		}, 8000);
 
 		function startTyping() {
 			headerH1
@@ -49,7 +62,7 @@ $(document).ready(function() {
 					typingText(headerPara, paraText, paraTextLength);
 					$(this).dequeue();
 				})
-				.delay(3000)
+				.delay(4000)
 				.queue(function() {
 					headerH1.html('');
 					headerPara.html('');
@@ -78,16 +91,20 @@ $(document).ready(function() {
 				n++;
 
 				if (n === textLength) {
-					selector.each(function() {
-						$(this).find('.cursor').remove();
-					});
+					//blinking curser after each statment
+					blinkingCursor();
+					function blinkingCursor() {
+						$('.cursor').fadeOut(300, function() {
+							$(this).fadeIn(300);
+							blinkingCursor();
+						});
+					}
 					clearInterval(intervalName);
 				}
-			}, 70);
+			}, 50);
 	}
 
 	//random background
-
 	setInterval(function() {
 		//randomNumber from 0-9
 		let randomNum = Math.floor(Math.random() * 10);

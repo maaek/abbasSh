@@ -11,8 +11,8 @@ body {
 }
 /* Start navbar  */
 .navbar-container {
-	/* background-image: linear-gradient(#1b262c, #1b262cb8); */
 	background-color: #1b262c;
+	/* background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00); */
 }
 
 .navbar-brand img {
@@ -104,9 +104,10 @@ body {
 
 @media screen and (max-width: 683px) {
 	.header-text h1 {
-		font-size: 36px;
+		height: 34px;
+		font-size: 28px;
 	}
 	.header-text p {
-		font-size: 16px;
+		font-size: 14px;
 	}
 }
