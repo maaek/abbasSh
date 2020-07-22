@@ -21,19 +21,28 @@ $(document).ready(function() {
 		}
 	);
 
+	//change navbar background color when clicking on navbar-toggler
+	$('.navbar-container').hover(
+		function() {
+			$(this).css('backgroundColor', '#1b262c');
+		},
+		function() {
+			$(this).css('backgroundColor', '');
+		}
+	);
+
 	//change navbar background on scroll
 	$(window).on('scroll', function() {
 		let navbarContainer = $('.navbar-container');
 
 		if (this.pageYOffset >= navbarContainer.height()) {
-			navbarContainer.css('backgroundColor', '#1b262c00');
-
+			navbarContainer.css('backgroundColor', '#1b262c');
+		} else if (this.pageYOffset < navbarContainer.height()) {
+			navbarContainer.css('backgroundColor', '');
 			navbarContainer.css(
 				'backgroundImage',
 				'linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00)'
 			);
-		} else if (this.pageYOffset < navbarContainer.height()) {
-			navbarContainer.css('backgroundColor', '#1b262c');
 		}
 	});
 
@@ -64,10 +73,11 @@ $(document).ready(function() {
 				})
 				.delay(4000)
 				.queue(function() {
-					headerH1.html('');
-					headerPara.html('');
+					deleteTyping(headerH1);
+					deleteTyping(headerPara);
 					$(this).dequeue();
 				})
+				.delay(1000)
 				.queue(function() {
 					typingText(headerH1, h1Text2, h1TextLength2);
 					typingText(headerPara, paraText2, paraTextLength2);
@@ -102,6 +112,21 @@ $(document).ready(function() {
 					clearInterval(intervalName);
 				}
 			}, 50);
+	}
+
+	function deleteTyping(selector) {
+		let afterTypeTextLength = $(selector).text().length;
+		let afterTypeText = $(selector).text();
+		let deletingInterval = setInterval(function() {
+			$(selector).html(afterTypeText.substr(0, afterTypeTextLength) + '<span class="cursor">|</span>');
+
+			afterTypeTextLength--;
+
+			if (afterTypeTextLength < 0) {
+				clearInterval(deletingInterval);
+				$('.cursor').remove();
+			}
+		}, 50);
 	}
 
 	//random background

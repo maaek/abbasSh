@@ -11,8 +11,9 @@ body {
 }
 /* Start navbar  */
 .navbar-container {
-	background-color: #1b262c;
-	/* background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00); */
+	z-index: 2;
+	background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00);
+	transition: all .3s ease-in-out;
 }
 
 .navbar-brand img {
@@ -61,7 +62,7 @@ body {
 
 /* Start header */
 .header {
-	height: calc(100vh - 58px);
+	height: 100vh;
 	background-image: url('imgs/header-1.jpg');
 	background-size: cover;
 	position: relative;
@@ -80,9 +81,8 @@ body {
 .header-text {
 	height: 200px;
 	font-family: 'Noto Sans KR', sans-serif;
-
 	z-index: 2;
-	top: 40%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #fff;
@@ -105,9 +105,32 @@ body {
 @media screen and (max-width: 683px) {
 	.header-text h1 {
 		height: 34px;
-		font-size: 28px;
+		font-size: 27px;
 	}
 	.header-text p {
 		font-size: 14px;
 	}
 }
+
+/* Start about */
+.about {
+	background-color: #f2f2f2;
+	padding-top: 97.5px;
+	padding-bottom: 97.5px;
+	vertical-align: middle;
+}
+.about h1 {
+	color: var(--main-color);
+}
+
+.about p {
+	color: #1b262c;
+	font-weight: 300;
+	font-size: 26px;
+}
+
+.about p span {
+	color: var(--main-color);
+	font-weight: 400;
+}
+/* End about */
