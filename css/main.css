@@ -7,7 +7,6 @@
 }
 
 body {
-	height: 2000px;
 }
 /* Start navbar  */
 .navbar-container {
@@ -119,7 +118,6 @@ body {
 	background-color: #f2f2f2;
 	padding-top: 97.5px;
 	padding-bottom: 97.5px;
-	vertical-align: middle;
 }
 .about h1 {
 	color: var(--main-color);
@@ -138,6 +136,75 @@ body {
 /* End about */
 /* Start skills */
 .skills {
-	height: 800px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
+
+.skills h1 {
+	color: var(--main-color);
+}
+
+.skill {
+	display: inline-block;
+}
+
+.skill .skill-name {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.5;
+	color: #34495e;
+}
+
+.skills .skill .skill-container {
+	background-color: #f2f2f2;
+	width: 700px;
+	height: 35px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+	.skills .skill .skill-container {
+		width: 510px;
+	}
+}
+
+@media screen and (max-width: 557px) {
+	.skills .skill .skill-container {
+		width: 320px;
+	}
+}
+
+.skill .skill-container .persentege {
+	z-index: 4;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	color: #fff;
+}
+.skill .skill-container .fill-in {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	z-index: 3;
+}
+.skill:nth-child(2) .skill-container .fill-in {
+	background-color: #16a085;
+}
+.skill:nth-child(3) .skill-container .fill-in {
+	background-color: #d35400;
+}
+.skill:nth-child(4) .skill-container .fill-in {
+	background-color: #2c3e50;
+}
+.skill:nth-child(5) .skill-container .fill-in {
+	background-color: #2980b9;
+}
+.skill:nth-child(6) .skill-container .fill-in {
+	background-color: #f39c12;
+}
+
 /* End skills */

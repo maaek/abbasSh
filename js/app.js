@@ -161,3 +161,22 @@ $(document).ready(function() {
 		$('.header').css('backgroundImage', `url(css/imgs/header-${randomNum}.jpg)`);
 	}, 10000);
 });
+
+//animate skills on scroll
+$(window).scroll(function() {
+	$('.section').each(function() {
+		if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
+			let sectionId = $(this).attr('id');
+			if (sectionId == 'skills') {
+				$('.skill').each(function(index, element) {
+					$(element).find('.fill-in').animate(
+						{
+							width: $(element).find('.persentege').text()
+						},
+						1000
+					);
+				});
+			}
+		}
+	});
+});
