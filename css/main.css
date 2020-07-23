@@ -7,10 +7,11 @@
 }
 
 body {
+	height: 5000px;
 }
 /* Start navbar  */
 .navbar-container {
-	z-index: 2;
+	z-index: 20;
 	background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00);
 	transition: all .3s ease-in-out;
 }
@@ -149,7 +150,7 @@ body {
 }
 
 .skill .skill-name {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 1.5;
 	color: #34495e;
@@ -157,31 +158,32 @@ body {
 
 .skills .skill .skill-container {
 	background-color: #f2f2f2;
-	width: 700px;
-	height: 35px;
+	width: 40vw;
+	height: 25px;
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
 	.skills .skill .skill-container {
-		width: 510px;
+		width: 80vw;
 	}
 }
 
 @media screen and (max-width: 557px) {
 	.skills .skill .skill-container {
-		width: 320px;
+		width: 75vw;
 	}
 }
 
 .skill .skill-container .persentege {
 	z-index: 4;
 	position: absolute;
-	top: 4px;
-	left: 4px;
+	top: 1px;
+	left: 6px;
 	color: #fff;
+	font-size: 14px;
 }
 .skill .skill-container .fill-in {
 	position: absolute;
@@ -191,20 +193,61 @@ body {
 	height: 100%;
 	z-index: 3;
 }
-.skill:nth-child(2) .skill-container .fill-in {
+.skill:nth-child(1) .skill-container .fill-in {
 	background-color: #16a085;
 }
-.skill:nth-child(3) .skill-container .fill-in {
+.skill:nth-child(2) .skill-container .fill-in {
 	background-color: #d35400;
 }
-.skill:nth-child(4) .skill-container .fill-in {
+.skill:nth-child(3) .skill-container .fill-in {
 	background-color: #2c3e50;
 }
-.skill:nth-child(5) .skill-container .fill-in {
+.skill:nth-child(4) .skill-container .fill-in {
 	background-color: #2980b9;
 }
-.skill:nth-child(6) .skill-container .fill-in {
+.skill:nth-child(5) .skill-container .fill-in {
 	background-color: #f39c12;
 }
+.skill:nth-child(6) .skill-container .fill-in {
+	background-color: #27ae60;
+}
 
+.skills .shafel-skills {
+	background-color: #fff;
+	height: 315px;
+	width: 315px;
+	position: relative;
+	z-index: 1;
+}
+.skills .shafel-skills img {
+	border: 3px solid var(--main-color);
+	border-radius: 10px;
+	left: 6%;
+	position: absolute;
+	background-color: #fff;
+}
+
+@media screen and (max-width: 557px) {
+	.skills .shafel-skills img {
+		width: 220px;
+	}
+}
+.shafel-skills .skill-1 {
+	z-index: 7;
+}
+.shafel-skills .skill-2 {
+	z-index: 6;
+}
+.shafel-skills .skill-3 {
+	z-index: 5;
+}
+.shafel-skills .skill-4 {
+	z-index: 4;
+}
+.shafel-skills .skill-5 {
+	z-index: 3;
+}
+.shafel-skills .skill-6 {
+	z-index: 2;
+}
 /* End skills */

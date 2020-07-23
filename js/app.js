@@ -160,23 +160,61 @@ $(document).ready(function() {
 
 		$('.header').css('backgroundImage', `url(css/imgs/header-${randomNum}.jpg)`);
 	}, 10000);
-});
 
-//animate skills on scroll
-$(window).scroll(function() {
-	$('.section').each(function() {
-		if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
-			let sectionId = $(this).attr('id');
-			if (sectionId == 'skills') {
-				$('.skill').each(function(index, element) {
-					$(element).find('.fill-in').animate(
-						{
-							width: $(element).find('.persentege').text()
-						},
-						1000
-					);
-				});
+	//animate skills on scroll
+	$(window).scroll(function() {
+		$('.section').each(function() {
+			if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
+				let sectionId = $(this).attr('id');
+				if (sectionId == 'skills') {
+					$('.skill').each(function(index, element) {
+						console.log(element);
+
+						$(element).find('.fill-in').animate(
+							{
+								width: $(element).find('.persentege').text()
+							},
+							1000
+						);
+					});
+				}
 			}
-		}
+		});
 	});
+
+	//Shuffle skills
+	let zIndexValue = 0;
+
+	let delay = 3000;
+	switching();
+	setInterval(function() {
+		switching();
+	}, 21000);
+
+	function switching() {
+		$('.shafel-skills img').each(function() {
+			$(this)
+				.delay(delay)
+				.animate(
+					{
+						left: '20%',
+						marginTop: 30
+					},
+					400,
+					function() {
+						zIndexValue--;
+						$(this).css('z-index', zIndexValue);
+					}
+				)
+				.animate(
+					{
+						left: '6%',
+						marginTop: 0
+					},
+					400
+				);
+			delay += 3000;
+		});
+		delay = 0;
+	}
 });
