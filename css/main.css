@@ -194,22 +194,22 @@ body {
 	z-index: 3;
 }
 .skill:nth-child(1) .skill-container .fill-in {
-	background-color: #16a085;
+	background-color: #f16524;
 }
 .skill:nth-child(2) .skill-container .fill-in {
-	background-color: #d35400;
+	background-color: #25abe0;
 }
 .skill:nth-child(3) .skill-container .fill-in {
-	background-color: #2c3e50;
+	background-color: #553b7d;
 }
 .skill:nth-child(4) .skill-container .fill-in {
-	background-color: #2980b9;
+	background-color: #f5de18;
 }
 .skill:nth-child(5) .skill-container .fill-in {
-	background-color: #f39c12;
+	background-color: #0968ac;
 }
 .skill:nth-child(6) .skill-container .fill-in {
-	background-color: #27ae60;
+	background-color: #f05033;
 }
 
 .skills .shafel-skills {
