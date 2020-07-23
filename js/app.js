@@ -21,22 +21,17 @@ $(document).ready(function() {
 		}
 	);
 
-	//change navbar background color when clicking on navbar-toggler
-	$('.navbar-container').hover(
-		function() {
-			$(this).css('backgroundColor', '#1b262c');
-		},
-		function() {
-			$(this).css('backgroundColor', '');
-		}
-	);
-
-	//change navbar background on scroll
-	$(window).on('scroll', function() {
+	//scroll effects
+	$(window).scroll(function() {
 		let navbarContainer = $('.navbar-container');
-
+		//change navbar background on scroll
 		if (this.pageYOffset >= navbarContainer.height()) {
 			navbarContainer.css('backgroundColor', '#1b262c');
+
+			//change navbar background color when clicking on navbar-toggler
+			$('.navbar-container').hover(function() {
+				$(this).css('backgroundColor', '#1b262c');
+			});
 		} else if (this.pageYOffset < navbarContainer.height()) {
 			navbarContainer.css('backgroundColor', '');
 			navbarContainer.css(
@@ -44,6 +39,35 @@ $(document).ready(function() {
 				'linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00)'
 			);
 		}
+
+		//adding and remove activ class from navbar links
+
+		$('.section').each(function() {
+			if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
+				let sectionId = $(this).attr('id');
+				$(`.nav-link[data-scroll="${sectionId}"]`)
+					.addClass('active')
+					.parent()
+					.siblings()
+					.find('.nav-link')
+					.removeClass('active');
+			}
+		});
+	});
+
+	//scroll to section on clicking navbar link
+
+	$('.nav-link').on('click', function(e) {
+		e.preventDefault();
+		$(this).addClass('active').parent().siblings().find('.nav-link').removeClass('active');
+
+		$('html, body').animate(
+			{
+				scrollTop: $('#' + $(this).data('scroll')).offset().top - $('.navbar-container').height()
+			},
+			1000
+		);
+		$('.navbar-container').css('backgroundColor', '#1b262c');
 	});
 
 	//header text typing

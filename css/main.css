@@ -39,9 +39,10 @@ body {
 	padding-right: 0 !important;
 	padding-left: 0 !important;
 	padding-bottom: 4px !important;
+	text-transform: uppercase;
 }
 .nav-link:hover {
-	color: #fff;
+	color: var(--main-color);
 }
 .nav-item {
 	position: relative;
@@ -66,6 +67,7 @@ body {
 	background-image: url('imgs/header-1.jpg');
 	background-size: cover;
 	position: relative;
+	transition: all .5s ease-in-out;
 }
 
 .header .overlay {
@@ -134,3 +136,8 @@ body {
 	font-weight: 400;
 }
 /* End about */
+/* Start skills */
+.skills {
+	height: 800px;
+}
+/* End skills */
