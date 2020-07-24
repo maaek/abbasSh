@@ -2,6 +2,10 @@
 	--main-color: #3282b8;
 }
 
+:root {
+	--animate-delay: 0.25s;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -14,6 +18,10 @@ body {
 	z-index: 20;
 	background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00);
 	transition: all .3s ease-in-out;
+}
+
+.navbar-container:hover {
+	background-color: #1b262c;
 }
 
 .navbar-brand img {
@@ -84,7 +92,7 @@ body {
 	height: 200px;
 	font-family: 'Noto Sans KR', sans-serif;
 	z-index: 2;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #fff;
@@ -104,6 +112,12 @@ body {
 	/* color: #d8d8d8; */
 }
 
+@media screen and (max-width: 904px) {
+	.header-text h1 {
+		font-size: 52px;
+	}
+}
+
 @media screen and (max-width: 683px) {
 	.header-text h1 {
 		height: 34px;
@@ -117,8 +131,8 @@ body {
 /* Start about */
 .about {
 	background-color: #f2f2f2;
-	padding-top: 97.5px;
-	padding-bottom: 97.5px;
+	padding-top: 100px;
+	padding-bottom: 130px;
 }
 .about h1 {
 	color: var(--main-color);

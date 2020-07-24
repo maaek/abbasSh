@@ -1,5 +1,4 @@
 //when document ready
-
 $(document).ready(function() {
 	// links hover effects
 	$('.navbar .nav-item').hover(
@@ -27,11 +26,6 @@ $(document).ready(function() {
 		//change navbar background on scroll
 		if (this.pageYOffset >= navbarContainer.height()) {
 			navbarContainer.css('backgroundColor', '#1b262c');
-
-			//change navbar background color when clicking on navbar-toggler
-			$('.navbar-container').hover(function() {
-				$(this).css('backgroundColor', '#1b262c');
-			});
 		} else if (this.pageYOffset < navbarContainer.height()) {
 			navbarContainer.css('backgroundColor', '');
 			navbarContainer.css(
@@ -168,8 +162,6 @@ $(document).ready(function() {
 				let sectionId = $(this).attr('id');
 				if (sectionId == 'skills') {
 					$('.skill').each(function(index, element) {
-						console.log(element);
-
 						$(element).find('.fill-in').animate(
 							{
 								width: $(element).find('.persentege').text()
@@ -185,7 +177,7 @@ $(document).ready(function() {
 	//Shuffle skills
 	let zIndexValue = 0;
 
-	let delay = 3000;
+	let delay = 5000;
 	switching();
 	setInterval(function() {
 		switching();
@@ -217,4 +209,28 @@ $(document).ready(function() {
 		});
 		delay = 0;
 	}
+});
+
+//animate.css on scroll
+$(window).scroll(function() {
+	$('.section').each(function() {
+		let scrollBottom = $(window).scrollTop() + $(window).height();
+		if (scrollBottom > $(this).offset().top) {
+			let sectionId = $(this).attr('id');
+			if (sectionId == 'about') {
+				$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
+				$(this).find('p').addClass('animate__animated animate__fadeInRight animate__delay-2s');
+			} else if (sectionId == 'skills') {
+				$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
+				$(this)
+					.find('.row ')
+					.find('.skills-persentege-container')
+					.addClass('animate__animated animate__fadeInLeft animate__delay-2s');
+				$(this)
+					.find('.row ')
+					.find('.shafel-skills-container')
+					.addClass('animate__animated animate__fadeInRight animate__delay-2s');
+			}
+		}
+	});
 });
