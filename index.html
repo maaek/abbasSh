@@ -21,46 +21,48 @@
 </head>
 <body id="home" class="section">
 
+     <!-- Start navbar -->
+     <div class="navbar-container col-12 p-0 fixed-top">
+        <nav class="navbar navbar-expand-lg col-12 col-lg-11 mx-auto">
+
+        <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item mx-auto mx-lg-2">
+                <span></span>
+                <a class="nav-link active" href="#" data-scroll="home">Home</a>
+            </li>
+            <li class="nav-item mx-auto mx-lg-2">
+                <span></span>
+                <a class="nav-link" href="#" data-scroll="about">About</a>
+            </li>
+            <li class="nav-item mx-auto  mx-lg-2">
+                <span></span>
+                <a class="nav-link" href="#" data-scroll="skills">Skills</a>
+            </li>
+            <li class="nav-item mx-auto  mx-lg-2">
+                <span></span>
+                <a class="nav-link" href="#" data-scroll="projects">Projects</a>
+            </li>
+            <li class="nav-item mx-auto  mx-lg-2">
+                <span></span>
+                <a class="nav-link" href="#" data-scroll="contact" >Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+</div>
+    <!-- End navbar -->
     
     <!-- Start header -->
     <div class="header">
-        <div class="overlay"></div>
-            <!-- Start navbar -->
-             <div class="navbar-container col-12 p-0 fixed-top">
-                <nav class="navbar navbar-expand-lg col-12 col-lg-11 mx-auto">
-    
-                <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item mx-auto mx-lg-2">
-                        <span></span>
-                        <a class="nav-link active" href="#" data-scroll="home">Home</a>
-                    </li>
-                    <li class="nav-item mx-auto mx-lg-2">
-                        <span></span>
-                        <a class="nav-link" href="#" data-scroll="about">About</a>
-                    </li>
-                    <li class="nav-item mx-auto  mx-lg-2">
-                        <span></span>
-                        <a class="nav-link" href="#" data-scroll="skills">Skills</a>
-                    </li>
-                    <li class="nav-item mx-auto  mx-lg-2">
-                        <span></span>
-                        <a class="nav-link" href="#" data-scroll="projects">Projects</a>
-                    </li>
-                    <li class="nav-item mx-auto  mx-lg-2">
-                        <span></span>
-                        <a class="nav-link" href="#" data-scroll="contact" >Contact</a>
-                    </li>
-                </ul>
-            </div>
         
-        </nav>
-    </div>
-            <!-- End navbar -->
+        <div class="overlay"></div>
+           
             <!-- start inside header -->
             <div class="header-text text-center col-12">
               <h1 data-text="Hi there, I'm Abbas" data-text2="I'm a frontend developer"></h1>
@@ -85,7 +87,7 @@
         <div id="skills" class="section skills ">
             <h1 class="pb-1 text-center">Skills</h1>
             <div class="row col-10 mx-auto">
-                <div class="col-12 skills-persentege-container col-lg-7 p-0 justify-content-center ">
+                <div id="projects-anmate-left" class="section col-12 skills-persentege-container col-lg-7 p-0 justify-content-center ">
                     <div class="skill skill-1 text-left  mx-auto justify-content-start py-1">
                         <span class="skill-name px-1">HTML</span>
                         <div class="skill-container">
@@ -129,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="shafel-skills-container pt-5 pt-lg-0 justify-content-center col-12 col-lg-5 d-flex flex-wrap align-items-center mx-auto">
+                <div id="projects-anmate-right" class="section shafel-skills-container pt-5 pt-lg-0 justify-content-center col-12 col-lg-5 d-flex flex-wrap align-items-center mx-auto">
                    <div class="shafel-skills">
                     <img class="skill-1" src="imgs/HTML.png" alt="">
                     <img class="skill-2" src="imgs/CSS.png" alt="">
@@ -144,8 +146,228 @@
       <!-- End skills -->
 
       <!-- Start projects -->
-
+        <div id="projects" class="section projects container text-center col-12 ">
+            <h1 class="pb-3 text-center">Projects</h1>
+            <div class="row justify-content-center col-12 mx-auto">
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem;">
+                    <img src="imgs/wearheryapp.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Weather App</h5>
+                      <p class="card-text">Weather app showing your current location weather and also you can look up any city's weather.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
+                      </div>
+                      <div class="text-center">
+                        <a href="https://weatheryapp.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/weatheryApp" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/memory-game.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Memory Game</h5>
+                      <p class="card-text">The famous cards matching game, you have 20 seconds to win and you can reset it.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="jQuery">jQuery</div>
+                      </div>
+                      <div class="text-center">
+                        <a href="https://memory-game-jquery.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/memory-game" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/blog.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Blog</h5>
+                      <p class="card-text">Personal blog with categories built with contentful (CMS) for adding content dynamically.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>                      </div>
+                      <div class="text-center">
+                        <a href="https://simple-contentful-blog.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/simple-contentful-blog" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-right" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/careglass.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Careglass Store</h5>
+                      <p class="card-text">Careglass is a sunglasses store built with contentful (CMS) for adding content dynamically.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
+                    </div>
+                      <div class="text-center">
+                        <a href="https://careglass-store.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/careglass" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-right" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/job-listings.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Job Listings</h5>
+                      <p class="card-text">This is a challenge from frontendmentor.io, it is a job listings with adding and removing fillters.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
+                    </div>
+                      <div class="text-center">
+                        <a href="https://static-job-listings-master.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/static-job-listings--master" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-right" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/social-media-dashboard.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Social Media Dashboard</h5>
+                      <p class="card-text">This is a challenge from frontendmentor.io, it is a static social media dashboard with dark mode.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="jQuery">jQuery</div>                   
+                     </div>
+                      <div class="text-center">
+                        <a href="https://abbasshdev.github.io/social-media-dashboard/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/social-media-dashboard" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/huddle.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Huddle</h5>
+                      <p class="card-text">This is a challenge from frontendmentor.io, it is a responsive landing page with multiple sections.</p>
+                      <div class="card-built-with">
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
+                     </div>
+                      <div class="text-center">
+                        <a href="https://abbasshdev.github.io/huddle-landing-page-with-alternating-feature-blocks-master/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/huddle-landing-page-with-alternating-feature-blocks-master" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/sign-up-form.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Sign-up Page</h5>
+                      <p class="card-text">This is a challenge from frontendmentor.io, sign-up form with validation.</p>
+                      <div class="card-built-with" >
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="JavaScript">JavaScript</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
+                     </div>
+                      <div class="text-center">
+                        <a href="https://abbasshdev.github.io/intro-component-with-signup-form-master-by-Abbas-SH-Dev/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/intro-component-with-signup-form-master-by-Abbas-SH-Dev" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-left" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/grocery-list.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Grocery Lists</h5>
+                      <p class="card-text">This is a grocery lists cart to add, remove groceries item or delete all items.</p>
+                      <div class="card-built-with" >
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="JavaScript">JavaScript</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
+                     </div>
+                      <div class="text-center">
+                        <a href="https://abbasshdev.github.io/Grocery-Lists/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/Grocery-Lists" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                <div id="projects-anmate-right" class="section card text-left m-4" style="width: 21rem; height: 27rem;">
+                    <img src="imgs/discount__calculator.png" class="card-img-top" alt="...">
+                    <div class="card-body mb-auto">
+                      <h5 class="card-title">Discount Calculator</h5>
+                      <p class="card-text">Calculator will calculate the discount and show the price before and after the discount.</p>
+                      <div class="card-built-with" >
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="Bootstrap">Bootstrap</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="JavaScript">JavaScript</div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
+                     </div>
+                      <div class="text-center">
+                        <a href="https://abbasshdev.github.io/Discount__Calculator/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
+                        <a href="https://github.com/AbbasShDev/Discount__Calculator" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
       <!-- End pojects -->
+
+      <!-- Start contact -->
+      <div id="contact" class="section contact">
+        <h1 class="pb-1 text-center">Contact</h1>
+        <div class="container col-10 col-md-8 col-lg-6 mt-5 mx-auto p-4">
+            <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name...">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Your Email address...">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" placeholder="Your Message..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control btn p-0" id="Send Message" value="Send Message">
+                </div>
+              </form>
+        </div>
+    </div>
+    <!-- End contact -->
+      
+    <!-- Start find-me  -->
+    <div class="find-me ">
+        
+            <h1 class="pb-1 mx-auto">find me on<span></span></h1>
+            
+        <div class="">
+            <a href="https://twitter.com/AbbasShDev" target="_blank"><i class="mx-2 p-3 fab fa-twitter"></i></a>
+            <a href="https://github.com/AbbasShDev" target="_blank"><i class="mx-2 p-3 fab fa-github "></i></a>
+            <a href="https://www.linkedin.com/in/abbas-alshaqaq-7b58221a5/" target="_blank"><i class="mx-2 p-3 fab fa-linkedin"></i></a>
+          </div>
+    </div>
+    <!-- End find-me  -->
+
+    <!-- Start Footer  -->
+    <div class="footer">  
+        <div>
+           © 2020 AbbasShDev 
+        </div>
+      </div>
+      <!-- End Footer  -->
     <!-- jQuery js -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- Popper.js -->

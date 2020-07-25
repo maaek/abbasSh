@@ -181,7 +181,7 @@ $(document).ready(function() {
 	switching();
 	setInterval(function() {
 		switching();
-	}, 21000);
+	}, 23000);
 
 	function switching() {
 		$('.shafel-skills img').each(function() {
@@ -222,14 +222,15 @@ $(window).scroll(function() {
 				$(this).find('p').addClass('animate__animated animate__fadeInRight animate__delay-2s');
 			} else if (sectionId == 'skills') {
 				$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
-				$(this)
-					.find('.row ')
-					.find('.skills-persentege-container')
-					.addClass('animate__animated animate__fadeInLeft animate__delay-2s');
-				$(this)
-					.find('.row ')
-					.find('.shafel-skills-container')
-					.addClass('animate__animated animate__fadeInRight animate__delay-2s');
+			} else if (sectionId == 'projects') {
+				$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
+			} else if (sectionId == 'projects-anmate-left') {
+				$(this).addClass('animate__animated animate__fadeInLeft animate__delay-2s');
+			} else if (sectionId == 'projects-anmate-right') {
+				$(this).addClass('animate__animated animate__fadeInRight animate__delay-2s');
+			} else if (sectionId == 'contactˇ') {
+				$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
+				$(this).find('.container').addClass('animate__animated animate__fadeInRight animate__delay-2s');
 			}
 		}
 	});

@@ -1,8 +1,5 @@
 :root {
 	--main-color: #3282b8;
-}
-
-:root {
 	--animate-delay: 0.25s;
 }
 
@@ -10,12 +7,9 @@
 	box-sizing: border-box;
 }
 
-body {
-	height: 5000px;
-}
 /* Start navbar  */
 .navbar-container {
-	z-index: 20;
+	z-index: 1000;
 	background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00);
 	transition: all .3s ease-in-out;
 }
@@ -71,11 +65,17 @@ body {
 
 /* Start header */
 .header {
+	display: flex;
 	height: 100vh;
 	background-image: url('imgs/header-1.jpg');
 	background-size: cover;
 	position: relative;
 	transition: all .5s ease-in-out;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: top center;
 }
 
 .header .overlay {
@@ -151,8 +151,8 @@ body {
 /* End about */
 /* Start skills */
 .skills {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .skills h1 {
@@ -235,7 +235,7 @@ body {
 }
 .skills .shafel-skills img {
 	border: 3px solid var(--main-color);
-	border-radius: 10px;
+	border-radius: 50px 0 50px 0;
 	left: 6%;
 	position: absolute;
 	background-color: #fff;
@@ -265,3 +265,196 @@ body {
 	z-index: 2;
 }
 /* End skills */
+
+/* Start projects  */
+.projects {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #f2f2f2;
+}
+
+.projects h1 {
+	color: var(--main-color);
+}
+
+.projects .card {
+	border-radius: 10px;
+	overflow: hidden;
+	border: none;
+}
+.projects .card .card-img-top {
+	height: 33%;
+}
+
+.projects .card .card-body .card-title {
+	font-weight: 700;
+	color: #1b262c;
+}
+
+.projects .card .card-body .card-text {
+	color: #636363;
+}
+
+.projects .card .card-body .card-built-with div {
+	font-size: 11px;
+	font-weight: 700;
+	display: inline-block;
+	color: #fff;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 400px) {
+	.projects .card .card-body .card-built-with div {
+		font-size: 8px;
+	}
+}
+
+.projects .card .card-body .card-built-with div[data-langTool="HTML"] {
+	background-color: #f16524;
+}
+.projects .card .card-body .card-built-with div[data-langTool="CSS"] {
+	background-color: #25abe0;
+}
+.projects .card .card-body .card-built-with div[data-langTool="Bootstrap"] {
+	background-color: #553b7d;
+}
+.projects .card .card-body .card-built-with div[data-langTool="JavaScript"] {
+	background-color: #f5de18;
+}
+.projects .card .card-body .card-built-with div[data-langTool="jQuery"] {
+	background-color: #0968ac;
+}
+
+.projects .card .card-body .btn {
+	color: #fff;
+	border-radius: 5px;
+	background-color: var(--main-color);
+	transform: scaleX(1);
+	transition: all .5s ease-in-out;
+}
+
+@media screen and (max-width: 400px) {
+	.projects .card .card-body .btn {
+		font-size: 11px;
+	}
+}
+
+.projects .card .card-body .btn:hover {
+	color: var(--main-color);
+	background-color: #fff;
+	border: 1px solid var(--main-color);
+	transform: scale(1.1);
+}
+/* End projects  */
+
+/* Start contact */
+.contact {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.contact h1 {
+	color: var(--main-color);
+}
+
+.contact .container {
+	border-radius: 10px;
+	box-shadow: 0px 0px 6px #bcbdbecc;
+}
+
+.contact .container label {
+	color: var(--main-color);
+	font-weight: 700;
+}
+.contact .container input,
+.contact .container textarea {
+	color: #1b262c;
+	font-size: 18px;
+}
+
+.contact .container input::placeholder,
+.contact .container textarea::placeholder {
+	color: #1b262c4d;
+}
+
+.contact .container textarea {
+	height: 170px;
+}
+
+.contact .container .btn {
+	width: 118px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: var(--main-color);
+	font-size: 14px;
+	font-weight: 700;
+	transition: all .5s ease-in-out;
+}
+
+.contact .container .btn:hover {
+	color: var(--main-color);
+	background-color: #fff;
+	border: 1px solid var(--main-color);
+}
+
+/* End contact */
+
+/* Start find-me  */
+.find-me {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: 100%;
+	height: 275px;
+	background-color: #1b262c;
+}
+
+.find-me h1 {
+	color: #fff;
+	width: 221px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.find-me h1 span {
+	position: absolute;
+	background: var(--main-color);
+	width: 61%;
+	height: 7px;
+	top: 52px;
+	left: 40px;
+	border-radius: 10px;
+}
+
+.find-me div {
+	margin: 50px;
+}
+
+.find-me div i {
+	border-radius: 50%;
+	border: 1px solid #fff;
+	text-align: center;
+	color: #fff;
+	transform: scaleX(1);
+	font-size: 24px;
+	transition: all .3s ease-in-out;
+}
+
+.find-me div i:hover {
+	border: 1px solid #fff;
+	color: #1b262c;
+	background-color: #fff;
+	transform: scale(1.4);
+}
+
+/* End find-me  */
+
+/* Start footer */
+.footer {
+	background-color: #1b262c;
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	text-align: left;
+}
+/* End footer */
