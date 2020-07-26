@@ -20,10 +20,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body id="home" class="section">
+    <!-- start settings box -->
+    <div class="settings-box">
+        <div class="toggle-settings">
+            <i class="fa fa-gear"></i>
+        </div>
+        <div class="settings-container">
+            <div class="option-box">
+                <h2>Colors</h2>
+                <ul class="colors-list">
+                    <li class="active" data-color="#3282b8"></li>
+                    <li data-color="#5d8135"></li>
+                    <li data-color="#fc6243"></li>
+                    <li data-color="#f2b705"></li>
+                    <li data-color="#8e44ad"></li>
+                </ul>
+            </div>
+            <div class="option-box">
+                <div class="random-background">
+                    <h4>Random Background</h4>
+                    <span class="yes active" data-background="yes">Yes</span>
+                    <span class="no" data-background="no">No</span>
+                </div>
+            </div>
 
-     <!-- Start navbar -->
+            <div class="option-box">
+                <div class="navbar-option">
+                    <h4>Fixed Top Navbar</h4>
+                    <span class="yes active" data-fixed="yes">Yes</span>
+                    <span class="no" data-fixed="no">No</span>
+                </div>
+            </div>
+            <button class="reset-option">Reset Option</button>
+        </div>
+    </div>
+    <!-- End settings box -->
+
+    <!-- Start landing-page -->
+    <div class="landing-page">
+         <!-- Start navbar -->
      <div class="navbar-container col-12 p-0 fixed-top">
-        <nav class="navbar navbar-expand-lg col-12 col-lg-11 mx-auto">
+        <nav class="navbar navbar-expand-lg py-1 col-12 col-lg-11 mx-auto">
 
         <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -57,20 +94,17 @@
 </nav>
 </div>
     <!-- End navbar -->
-    
-    <!-- Start header -->
-    <div class="header">
-        
+     <!-- Start header -->
+     <div class="header">
         <div class="overlay"></div>
-           
-            <!-- start inside header -->
             <div class="header-text text-center col-12">
               <h1 data-text="Hi there, I'm Abbas" data-text2="I'm a frontend developer"></h1>
               <p data-text="Nice to meet you." data-text2="HTML, CSS, Bootstrap, JavaScript and jQuery" ></p>
             </div>
-            <!-- End inside header -->
     </div>
      <!-- End header -->
+    </div>
+     <!-- End landing-page -->
 
      <!-- Start about -->
 
