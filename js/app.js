@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	//scroll effects
 	$(window).scroll(function() {
-		let navbarContainer = $('.navbar-container');
+		let navbarContainer = $('.navbar');
 		//change navbar background on scroll
 		if (this.pageYOffset >= navbarContainer.height()) {
 			navbarContainer.css('backgroundColor', '#1b262c');
@@ -34,10 +34,9 @@ $(document).ready(function() {
 			);
 		}
 
-		//adding and remove activ class from navbar links
-
+		//adding and remove active class from navbar links
 		$('.section').each(function() {
-			if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
+			if ($(window).scrollTop() > $(this).offset().top - $('.navbar').height() - 1) {
 				let sectionId = $(this).attr('id');
 				$(`.nav-link[data-scroll="${sectionId}"]`)
 					.addClass('active')
@@ -57,11 +56,11 @@ $(document).ready(function() {
 
 		$('html, body').animate(
 			{
-				scrollTop: $('#' + $(this).data('scroll')).offset().top - $('.navbar-container').height()
+				scrollTop: $('#' + $(this).data('scroll')).offset().top - $('.navbar').height()
 			},
 			1000
 		);
-		$('.navbar-container').css('backgroundColor', '#1b262c');
+		$('.navbar').css('backgroundColor', '#1b262c');
 	});
 
 	//header text typing
@@ -166,7 +165,7 @@ $(document).ready(function() {
 	//animate skills on scroll
 	$(window).scroll(function() {
 		$('.section').each(function() {
-			if ($(window).scrollTop() > $(this).offset().top - $('.navbar-container').height() - 1) {
+			if ($(window).scrollTop() > $(this).offset().top - $('.navbar').height() - 1) {
 				let sectionId = $(this).attr('id');
 				if (sectionId == 'skills') {
 					$('.skill').each(function(index, element) {
@@ -244,7 +243,6 @@ $(document).ready(function() {
 	});
 
 	// Settings box
-
 	$('.settings-box .toggle-settings').on('click', function() {
 		$(this).find('.fa-gear').toggleClass('fa-spin');
 
@@ -265,6 +263,15 @@ $(document).ready(function() {
 		}
 
 		$(this).toggleClass('open');
+	});
+
+	$('.settings-box .toggle-settings').blur(function() {
+		$('.settings-box').animate(
+			{
+				left: '-226px'
+			},
+			10
+		);
 	});
 
 	//Seting local storage for main color storage
@@ -324,10 +331,10 @@ $(document).ready(function() {
 	let navOption = localStorage.getItem('navOption');
 	$('.option-box .navbar-option span').each(function() {
 		if (navOption == 'true') {
-			$('.navbar-container').addClass('fixed-top');
+			$('.navbar').addClass('fixed-top');
 			$(this).parent().find('.yes').addClass('active').siblings().removeClass('active');
 		} else if (navOption == 'false') {
-			$('.navbar-container').removeClass('fixed-top');
+			$('.navbar').removeClass('fixed-top');
 			$(this).parent().find('.no').addClass('active').siblings().removeClass('active');
 		}
 	});
@@ -339,10 +346,10 @@ $(document).ready(function() {
 
 		if ($(this).data('fixed') == 'yes') {
 			localStorage.setItem('navOption', true);
-			$('.navbar-container').addClass('fixed-top');
+			$('.navbar').addClass('fixed-top');
 		} else if ($(this).data('fixed') == 'no') {
 			localStorage.setItem('navOption', false);
-			$('.navbar-container').removeClass('fixed-top');
+			$('.navbar').removeClass('fixed-top');
 		}
 	});
 	//Change navbar option on click
@@ -354,4 +361,9 @@ $(document).ready(function() {
 		$('.option-box .random-background .yes').click();
 		$('.option-box .navbar-option .yes').click();
 	});
+});
+
+//adding and remove active class from navbar
+$('.navbar-toggler').click(function() {
+	$('.navbar-toggler').toggleClass('active-navbar');
 });

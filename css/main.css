@@ -17,7 +17,7 @@
 	background-color: #fff;
 	width: 226px;
 	z-index: 999;
-	min-height: 77%;
+	min-height: 479px;
 	transition: 0.3s;
 	outline: none;
 	border-bottom-right-radius: 10px;
@@ -134,6 +134,7 @@
 
 /* End setting box */
 
+/* Start landing-page  */
 .landing-page {
 	background-image: url('imgs/header-1.jpg');
 	background-size: cover;
@@ -143,14 +144,19 @@
 	background-attachment: fixed;
 }
 /* Start navbar  */
-.navbar-container {
+.navbar {
 	z-index: 1000;
 	background-image: linear-gradient(#1b262c, #1b262cb8, #1b262c70, #1b262c40, #1b262c21, #1b262c00);
 	transition: all .3s ease-in-out;
-	height: 48px;
 }
 
-.navbar-container:hover {
+.navbar:hover {
+	background-color: #1b262c;
+}
+.navbar-collapse {
+	transition: all .3s ease-in-out;
+}
+.navbar:hover .navbar-collapse {
 	background-color: #1b262c;
 }
 
@@ -162,6 +168,36 @@
 }
 
 .navbar-toggler {
+	border-color: none;
+	background: none;
+	cursor: pointer;
+}
+
+.my-span {
+	background: none;
+	display: block;
+	background-color: #fff;
+	width: 25px;
+	height: 2px;
+	margin: 6px 0;
+	transition: transform .5s ease;
+}
+
+.active-navbar .my-span:first-child {
+	height: 2px;
+	transform: rotate(-42deg) translate(-8px, 5px);
+}
+
+.active-navbar .my-span:nth-child(2) {
+	transform: scale(0);
+}
+
+.active-navbar .my-span:last-child {
+	height: 2px;
+	transform: rotate(45deg) translate(-6px, -4px);
+}
+
+/* .navbar-toggler {
 	border: 1px solid #fff !important;
 }
 .navbar-toggler:focus {
@@ -169,7 +205,7 @@
 }
 .navbar .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
+}*/
 
 .nav-link {
 	color: #fff;
@@ -198,12 +234,10 @@
 }
 
 /* End navbar  */
-
 /* Start header */
 .header {
 	height: 100vh;
 	transition: all .5s ease-in-out;
-	z-index: -1;
 }
 
 .header .overlay {
@@ -255,6 +289,9 @@
 		font-size: 14px;
 	}
 }
+/* End header  */
+
+/* End landing-page  */
 
 /* Start about */
 .about {
