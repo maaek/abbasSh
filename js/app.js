@@ -64,44 +64,40 @@ $(document).ready(function() {
 	});
 
 	//header text typing
-	$('.header-text').each(function() {
-		let headerH1 = $(this).find('h1'),
-			h1Text = headerH1.data('text'),
-			h1Text2 = headerH1.data('text2'),
-			h1TextLength = h1Text.length,
-			h1TextLength2 = h1Text2.length;
 
-		let headerPara = $(this).find('p'),
-			paraText = headerPara.data('text'),
-			paraText2 = headerPara.data('text2'),
-			paraTextLength = paraText.length,
-			paraTextLength2 = paraText2.length;
+	let headerH1 = $('.header-text h1'),
+		h1Text = headerH1.data('text'),
+		h1Text2 = headerH1.data('text2'),
+		h1TextLength = h1Text.length,
+		h1TextLength2 = h1Text2.length;
 
-		//start typing
-		startTyping();
-		//start typing with the interval
+	let headerPara = $('.header-text p'),
+		paraText = headerPara.data('text'),
+		paraText2 = headerPara.data('text2'),
+		paraTextLength = paraText.length,
+		paraTextLength2 = paraText2.length;
 
-		function startTyping() {
-			headerH1
-				.queue(function() {
-					typingText(headerH1, h1Text, h1TextLength);
-					typingText(headerPara, paraText, paraTextLength);
-					$(this).dequeue();
-				})
-				.delay(4000)
-				.queue(function() {
-					deleteTyping(headerH1);
-					deleteTyping(headerPara);
-					$(this).dequeue();
-				})
-				.delay(1000)
-				.queue(function() {
-					typingText(headerH1, h1Text2, h1TextLength2);
-					typingText(headerPara, paraText2, paraTextLength2);
-					$(this).dequeue();
-				});
-		}
-	});
+	//start typing with the interval
+	function startTyping() {
+		headerH1
+			.queue(function() {
+				typingText(headerH1, h1Text, h1TextLength);
+				typingText(headerPara, paraText, paraTextLength);
+				$(this).dequeue();
+			})
+			.delay(4000)
+			.queue(function() {
+				deleteTyping(headerH1);
+				deleteTyping(headerPara);
+				$(this).dequeue();
+			})
+			.delay(1000)
+			.queue(function() {
+				typingText(headerH1, h1Text2, h1TextLength2);
+				typingText(headerPara, paraText2, paraTextLength2);
+				$(this).dequeue();
+			});
+	}
 
 	//initalizing type by intarvel
 	function typingText(selector, text, textLength) {
@@ -361,13 +357,15 @@ $(document).ready(function() {
 		$('.option-box .random-background .yes').click();
 		$('.option-box .navbar-option .yes').click();
 	});
+
+	$(window).on('load', function() {
+		$('.loading-screen').fadeOut();
+		//start typing
+		startTyping();
+	});
 });
 
 //adding and remove active class from navbar
 $('.navbar-toggler').click(function() {
 	$('.navbar-toggler').toggleClass('active-navbar');
-});
-
-$(window).on('load', function() {
-	$('.loading-screen').fadeOut();
 });
