@@ -186,9 +186,9 @@ End loading-screen
 @media screen and (max-width: 557px) {
 	.landing-page {
 		background-image: url('imgs/mobile-header.jpg') !important;
-		background-size: none;
-		max-width: 100%;
+		background-size: contain;
 		height: 100vh;
+		background-attachment: none;
 	}
 }
 /* Start navbar  */
