@@ -216,31 +216,6 @@ $(document).ready(function() {
 		delay = 0;
 	}
 
-	//animate.css on scroll
-	$(window).scroll(function() {
-		$('.section').each(function() {
-			let scrollBottom = $(window).scrollTop() + $(window).height() + $('.navbar').height();
-			if (scrollBottom > $(this).offset().top) {
-				let sectionId = $(this).attr('id');
-				if (sectionId == 'about') {
-					$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
-					$(this).find('p').addClass('animate__animated animate__fadeInRight animate__delay-2s');
-				} else if (sectionId == 'skills') {
-					$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
-				} else if (sectionId == 'projects') {
-					$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
-				} else if (sectionId == 'projects-anmate-left') {
-					$(this).addClass('animate__animated animate__fadeInLeft animate__delay-2s');
-				} else if (sectionId == 'projects-anmate-right') {
-					$(this).addClass('animate__animated animate__fadeInRight animate__delay-2s');
-				} else if (sectionId == 'contactˇ') {
-					$(this).find('h1').addClass('animate__animated animate__bounceInLeft animate__delay-2s');
-					$(this).find('.container').addClass('animate__animated animate__fadeInRight animate__delay-2s');
-				}
-			}
-		});
-	});
-
 	// Settings box
 	$('.settings-box .toggle-settings').on('click', function() {
 		$(this).find('.fa-gear').toggleClass('fa-spin');
