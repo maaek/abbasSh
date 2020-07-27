@@ -186,9 +186,10 @@ End loading-screen
 @media screen and (max-width: 557px) {
 	.landing-page {
 		background-image: url('imgs/mobile-header.jpg') !important;
-		background-size: contain;
+		background-size: none;
 		height: 843px;
 		background-attachment: none;
+		background-position: none;
 	}
 }
 /* Start navbar  */
@@ -288,12 +289,6 @@ End loading-screen
 	transition: all .5s ease-in-out;
 }
 
-@media screen and (max-width: 557px) {
-	.header {
-		height: 843px;
-	}
-}
-
 .header .overlay {
 	position: absolute;
 	top: 0;
@@ -302,6 +297,15 @@ End loading-screen
 	height: 100%;
 	z-index: 1;
 	background-color: #1b262cb8;
+}
+
+@media screen and (max-width: 557px) {
+	.header {
+		height: 843px;
+	}
+	.header .overlay {
+		height: 843px;
+	}
 }
 
 .header-text {
