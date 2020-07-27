@@ -91,7 +91,7 @@ $(document).ready(function() {
 				deleteTyping(headerPara);
 				$(this).dequeue();
 			})
-			.delay(1000)
+			.delay(1300)
 			.queue(function() {
 				typingText(headerH1, h1Text2, h1TextLength2);
 				typingText(headerPara, paraText2, paraTextLength2);
