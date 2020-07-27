@@ -7,7 +7,8 @@
 	box-sizing: border-box;
 }
 
-/* Start loading-screen */
+/* 
+Start loading-screen
 .loading-screen {
 	z-index: 10000;
 	position: fixed;
@@ -26,7 +27,8 @@
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-/* End loading-screen */
+End loading-screen
+ */
 
 /* Start settings box */
 
