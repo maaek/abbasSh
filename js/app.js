@@ -94,7 +94,7 @@ $(document).ready(function() {
 				deleteTyping(headerPara);
 				$(this).dequeue();
 			})
-			.delay(1000)
+			.delay(1300)
 			.queue(function() {
 				typingText(headerH1, h1Text2, h1TextLength2);
 				typingText(headerPara, paraText2, paraTextLength2);
@@ -219,7 +219,7 @@ $(document).ready(function() {
 	//animate.css on scroll
 	$(window).scroll(function() {
 		$('.section').each(function() {
-			let scrollBottom = $(window).scrollTop() + $(window).height();
+			let scrollBottom = $(window).scrollTop() + $(window).height() + $('.navbar').height();
 			if (scrollBottom > $(this).offset().top) {
 				let sectionId = $(this).attr('id');
 				if (sectionId == 'about') {
