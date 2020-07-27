@@ -239,15 +239,6 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 	});
 
-	$('.settings-box .toggle-settings').blur(function() {
-		$('.settings-box').animate(
-			{
-				left: '-226px'
-			},
-			10
-		);
-	});
-
 	//Seting local storage for main color storage
 	let storageColor = localStorage.getItem('main-color');
 
@@ -334,6 +325,25 @@ $(document).ready(function() {
 		$('.colors-list li').eq(0).click();
 		$('.option-box .random-background .yes').click();
 		$('.option-box .navbar-option .yes').click();
+	});
+
+	//scroll top btn
+	$('.scroll-up').click(function() {
+		$('html, body').animate(
+			{
+				scrollTop: 0
+			},
+			1000
+		);
+	});
+
+	$(window).scroll(function() {
+		let scrollUp = $('.scroll-up');
+		if ($(window).scrollTop() >= 1000) {
+			scrollUp.slideDown(200);
+		} else {
+			scrollUp.slideUp(200);
+		}
 	});
 });
 

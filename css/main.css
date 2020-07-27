@@ -30,8 +30,28 @@ Start loading-screen
 End loading-screen
  */
 
-/* Start settings box */
+/* start scroll-up  */
+.scroll-up {
+	text-align: center;
+	background-color: var(--main-color);
+	position: fixed;
+	background-color: var(--main-color);
+	position: fixed;
+	z-index: 1000;
+	bottom: 20px;
+	right: 20px;
+	color: #fff;
+	padding: 1px 4px;
+	cursor: pointer;
+	display: none;
+}
 
+.scroll-up i {
+	font-size: 18px;
+}
+/* end scroll-up  */
+
+/* Start settings box */
 .settings-box {
 	position: fixed;
 	left: -226px;
