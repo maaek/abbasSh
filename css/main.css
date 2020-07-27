@@ -219,6 +219,12 @@ End loading-screen
 	transition: all .3s ease-in-out;
 }
 
+@media screen and (max-width: 991px) {
+	.navbar {
+		background-color: #1b262c;
+	}
+}
+
 .navbar:hover {
 	background-color: #1b262c;
 }
