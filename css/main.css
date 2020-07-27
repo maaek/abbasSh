@@ -186,7 +186,7 @@ End loading-screen
 @media screen and (max-width: 557px) {
 	.landing-page {
 		background-image: url('imgs/mobile-header.jpg') !important;
-		background-size: none;
+		background-size: contain;
 		height: 843px;
 		background-attachment: none;
 		background-position: none;
