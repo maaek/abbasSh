@@ -187,6 +187,7 @@ End loading-screen
 	.landing-page {
 		background-image: url('imgs/mobile-header.jpg') !important;
 		background-size: contain;
+		height: 669px;
 		background-attachment: none;
 		background-position: none;
 	}
@@ -296,6 +297,15 @@ End loading-screen
 	height: 100%;
 	z-index: 1;
 	background-color: #1b262cb8;
+}
+
+@media screen and (max-width: 557px) {
+	.header {
+		height: 669px;
+	}
+	.header .overlay {
+		height: 669px;
+	}
 }
 
 .header-text {
