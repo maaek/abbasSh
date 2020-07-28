@@ -41,13 +41,13 @@ End loading-screen
 	bottom: 20px;
 	right: 20px;
 	color: #fff;
-	padding: 1px 4px;
+	padding: 3px 7px;
 	cursor: pointer;
 	display: none;
 }
 
 .scroll-up i {
-	font-size: 18px;
+	font-size: 20px;
 }
 /* end scroll-up  */
 
@@ -221,7 +221,7 @@ End loading-screen
 
 @media screen and (max-width: 991px) {
 	.navbar {
-		background-color: #1b262c;
+		background-color: #1b262c !important;
 	}
 }
 
