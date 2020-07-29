@@ -145,6 +145,36 @@ $(document).ready(function() {
 		}, 50);
 	}
 
+	//scroll down icon animation
+	function bounceDownUp() {
+		$('.header i')
+			.animate(
+				{
+					bottom: '20px',
+					opacity: '.75'
+				},
+				300
+			)
+			.animate(
+				{
+					bottom: '40px',
+					opacity: '1'
+				},
+				300,
+				function() {
+					bounceDownUp();
+				}
+			);
+		$(window).on('scroll', function() {
+			if ($(this).scrollTop() > $(this).height() - 400) {
+				$('.header i').fadeOut(200);
+			} else {
+				$('.header i').fadeIn(200);
+			}
+		});
+	}
+	bounceDownUp();
+
 	//random background
 	let randomBgOption = true;
 

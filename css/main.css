@@ -7,6 +7,16 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: Helvetica !important;
+}
+
+@media screen and (max-width: 557px) {
+	body {
+		font-family: Quicksand !important;
+	}
+}
+
 /* 
 Start loading-screen
 .loading-screen {
@@ -313,6 +323,7 @@ End loading-screen
 .header {
 	height: 100vh;
 	transition: all .5s ease-in-out;
+	position: relative;
 }
 
 .header .overlay {
@@ -336,7 +347,7 @@ End loading-screen
 
 .header-text {
 	height: 200px;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: Sacramento;
 	z-index: 2;
 	top: 50%;
 	left: 50%;
@@ -373,6 +384,16 @@ End loading-screen
 		font-size: 14px;
 	}
 }
+
+.header i {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	color: #fff;
+	transform: translateX(-50%);
+	z-index: 3;
+	font-size: 30px;
+}
 /* End header  */
 
 /* End landing-page  */
@@ -385,6 +406,7 @@ End loading-screen
 }
 .about h1 {
 	color: var(--main-color);
+	font-family: Futura;
 }
 
 .about p {
@@ -406,6 +428,7 @@ End loading-screen
 
 .skills h1 {
 	color: var(--main-color);
+	font-family: Futura;
 }
 
 .skill {
@@ -524,6 +547,7 @@ End loading-screen
 
 .projects h1 {
 	color: var(--main-color);
+	font-family: Futura;
 }
 
 .projects .card {
@@ -600,6 +624,7 @@ End loading-screen
 .contact {
 	padding-top: 60px;
 	padding-bottom: 60px;
+	font-family: Futura;
 }
 
 .contact h1 {
@@ -659,9 +684,10 @@ End loading-screen
 
 .find-me h1 {
 	color: #fff;
-	width: 221px;
+	width: 260px;
 	position: relative;
 	text-transform: uppercase;
+	font-family: Futura;
 }
 
 .find-me h1 span {
@@ -670,7 +696,7 @@ End loading-screen
 	width: 61%;
 	height: 7px;
 	top: 52px;
-	left: 40px;
+	left: 50.5px;
 	border-radius: 10px;
 }
 
