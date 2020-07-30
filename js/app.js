@@ -77,9 +77,6 @@ $(document).ready(function() {
 		paraTextLength = paraText.length,
 		paraTextLength2 = paraText2.length;
 
-	//start typing
-	startTyping();
-
 	//start typing with the interval
 	function startTyping() {
 		headerH1
@@ -375,6 +372,33 @@ $(document).ready(function() {
 			scrollUp.slideUp(200);
 		}
 	});
+
+	//save prefered lang in local srorage
+	let preferdLang = localStorage.getItem('lang');
+	if (preferdLang == 'eng' && $('html').attr('lang') == 'en') {
+		$('.loading-screen').remove();
+		//start typing
+		startTyping();
+	} else if (preferdLang == 'ar') {
+		$('.loading-screen').remove();
+		//start typing
+		startTyping();
+	}
+	//on click english fadeout overlay
+	$('.loading-screen .eng').on('click', function(e) {
+		e.preventDefault();
+		$('.loading-screen').remove();
+		//start typing
+		startTyping();
+
+		localStorage.setItem('lang', 'eng');
+	});
+
+	if ($('html').attr('lang') == 'ar') {
+		localStorage.setItem('lang', 'ar');
+		//start typing
+		startTyping();
+	}
 });
 
 //adding and remove active class from navbar
