@@ -379,7 +379,9 @@ $(document).ready(function() {
 		$('.loading-screen').remove();
 		//start typing
 		startTyping();
-	} else if (preferdLang == 'ar') {
+	}
+
+	if (preferdLang == 'ar' && $('html').attr('lang') == 'en') {
 		$('.loading-screen').remove();
 		//start typing
 		startTyping();
