@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOHAMMED KHORMI</title>
+    <title>AbbasShDev</title>
     <!-- Icon made by https://freeicons.io/profile/3 from www.freeicons.io -->
     <link rel="icon" type="image/svg" sizes="32x32" href="imgs/favicon.svg">
      <!-- normalize CSS -->
@@ -13,21 +13,14 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/6652aa2ce8.js" crossorigin="anonymous"></script>
      <!-- Bootstrap js -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap" rel="stylesheet">
+  </head>
 <body id="home" class="section">
-
-    <div class="loading-screen">
-      <div>
-        <img src="imgs/logo.png" alt="">
-      <div>
-        <a  class="btn ar" href="index-ar.html">عربي</a>
-        <a class="btn eng" href="">English</a>
-      </div>
-      </div>
-    </div>
     <!-- start scroll-up -->
     <div class="scroll-up">
       <i class="fas fa-chevron-up"></i>
@@ -41,7 +34,7 @@
         </div>
         <div class="settings-container">
             <div class="option-box">
-                <h2>Colors</h2>
+                <h2>الألوان</h2>
                 <ul class="colors-list">
                     <li class="active" data-color="#3282b8"></li>
                     <li data-color="#5d8135"></li>
@@ -52,28 +45,29 @@
             </div>
             <div class="option-box">
                 <div class="random-background">
-                    <h4>Random Background</h4>
-                    <p>(Only In Big Screen Devices)</p>
-                    <span class="yes active" data-background="yes">Yes</span>
-                    <span class="no" data-background="no">No</span>
+                    <h4>الخلفية المتغيرة</h4>
+                    <p>(فقط في الشاشات الكبيرة)</p>
+                    <span class="yes active" data-background="yes">نعم</span>
+                    <span class="no" data-background="no">لا</span>
                 </div>
             </div>
 
             <div class="option-box">
                 <div class="navbar-option">
-                    <h4>Fixed Top Navbar</h4>
-                    <span class="yes active" data-fixed="yes">Yes</span>
-                    <span class="no" data-fixed="no">No</span>
+                    <h4>أبقي شريط التنقل ثابت</h4>
+                    <span class="yes active" data-fixed="yes">نعم</span>
+                    <span class="no" data-fixed="no">لا</span>
                 </div>
             </div>
+
             <div class="option-box">
-                <div class="lang-option">
-                    <h4>Websie Language</h4>
-                    <a class="eng selected">English</a>
-                    <a href="index-ar.html" class="ar">عربي</a>
-                </div>
-            </div>
-            <button class="reset-option">Reset Options</button>
+              <div class="lang-option">
+                  <h4>لغة الموقع</h4>
+                  <a href="index.html" class="eng">English</a>
+                  <a class="ar selected">عربي</a>
+              </div>
+          </div>
+            <button class="reset-option">إعادة تعين الخيارات</button>
         </div>
     </div>
     <!-- End settings box -->
@@ -95,23 +89,23 @@
         <ul class="navbar-nav ml-lg-auto">
             <li class="nav-item mx-auto mx-lg-2">
                 <span></span>
-                <a class="nav-link active" href="#" data-scroll="home">Home</a>
+                <a class="nav-link active" href="#" data-scroll="home">الرئيسية</a>
             </li>
             <li class="nav-item mx-auto mx-lg-2">
                 <span></span>
-                <a class="nav-link" href="#" data-scroll="about">About</a>
+                <a class="nav-link" href="#" data-scroll="about">من أنا</a>
             </li>
             <li class="nav-item mx-auto  mx-lg-2">
                 <span></span>
-                <a class="nav-link" href="#" data-scroll="skills">Skills</a>
+                <a class="nav-link" href="#" data-scroll="skills">المهارات</a>
             </li>
             <li class="nav-item mx-auto  mx-lg-2">
                 <span></span>
-                <a class="nav-link" href="#" data-scroll="projects">Projects</a>
+                <a class="nav-link" href="#" data-scroll="projects">أعمالي</a>
             </li>
             <li class="nav-item mx-auto  mx-lg-2">
                 <span></span>
-                <a class="nav-link" href="#" data-scroll="contact" >Contact</a>
+                <a class="nav-link" href="#" data-scroll="contact" >تواصل معي</a>
             </li>
         </ul>
     </div>
@@ -121,9 +115,10 @@
     <!-- End navbar -->
      <!-- Start header -->
      <div class="header">
+        
             <div class="header-text text-center col-12">
-              <h1 data-text="Hi there, I'm MOHAMMED KHORMI" data-text2="I'm a frontend developer"></h1>
-              <p data-text="Nice to meet you." data-text2="HTML, CSS, Bootstrap, JavaScript and jQuery" ></p>
+              <h1 data-text="اهلاً وسهلاً، انا عباس." data-text2="مطور مواقع (فرونت اند)."></h1>
+              <p data-text="شكراٍ لزيارتك موقعي." data-text2="HTML, CSS, Bootstrap, JavaScript and jQuery" ></p>
             </div>
             <i class="fas fa-angle-down"></i>
     </div>
@@ -135,18 +130,18 @@
 
      <div id="about" class="section about container text-center col-12 ">
         <div>
-            <h1>About me</h1>
-        <p class="pt-5 col-12 col-lg-10 mx-auto ">My name is <span>MOHAMMED KHORMI</span>, i'm a senior computer science student at IPA (INSTITUITE OF PUBLIC ADMINSTRATION). I love web development, i self studied frontend web fields and i have been studying some courses and building projects to help me improve my skills as a frontend developer.</p>
-        <p class="pt-2 col-12 col-lg-10 mx-auto ">I'm looking forward to study backend development. I'm passionate about being a full stack web developer to build awesome projects that help people and make our life much easier.</p>
+            <h1>من أنا</h1>
+        <p class="pt-5 col-12 col-lg-10 mx-auto ">اسمي <span> عباس الشقاق</span> ،طالب علوم حاسب في كلية الجبيل الجامعي. احب البرمجة وبرمجة المواقع. لقد تعلمت ذاتياً برمجة المواقع. وبنتيت العديد من المشاريع لمساعدتي في تطوير مهاراتي.</p>
+        <p class="pt-2 col-12 col-lg-10 mx-auto ">أتطلع لدراسة برمجة المواقع (باك اند) . انا شغوف لكي اكون مطور مواقع (فل ستاك) لبناء موقع رائعة تساعد لجعل حياتنا اسهل.</p>
         </div>
      </div>
       <!-- End about -->
 
       <!-- Start skills -->
         <div id="skills" class="section skills ">
-            <h1 class="pb-1 text-center">Skills</h1>
+            <h1 class="pb-1 text-center">المَهارات</h1>
             <div class="row col-10 mx-auto">
-                <div class="col-12 skills-persentege-container col-lg-7 p-0 justify-content-center ">
+                <div dir="l" class="col-12 skills-persentege-container col-lg-7 p-0 justify-content-center ">
                     <div class="skill skill-1 text-left  mx-auto justify-content-start py-1">
                         <span class="skill-name px-1">HTML</span>
                         <div class="skill-container">
@@ -206,13 +201,13 @@
 
       <!-- Start projects -->
         <div id="projects" class="section projects container text-center col-12 ">
-            <h1 class="pb-3 text-center">Projects</h1>
+            <h1 class="pb-3 text-center">أعمالي</h1>
             <div class="row justify-content-center col-12 mx-auto">
                 <div class="card text-left m-4" style="width: 21rem;">
                     <img src="imgs/wearheryapp.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Weather App</h5>
-                      <p class="card-text">Weather app showing your current location weather and also you can look up any city's weather.</p>
+                      <h5 class="card-title">تطبيق الطقس</h5>
+                      <p class="card-text">لمشاهدة احوال الطقس في موقعك الحالي وكذالك يمكن اضافة مدينة لمشاهدة احوال الطقس فيها.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
@@ -220,16 +215,16 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
                       </div>
                       <div class="text-center">
-                        <a href="https://weatheryapp.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/weatheryApp" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://weatheryapp.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/weatheryApp" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/memory-game.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Memory Game</h5>
-                      <p class="card-text">The famous cards matching game, you have 20 seconds to win and you can reset it.</p>
+                      <h5 class="card-title">لعبة الذاكرة</h5>
+                      <p class="card-text">اللعبة الشهيرة، لعبة مقارنة الاشكال المتشابهه ويجب حلها خلال ٢٠ ثانية كما يمكن إعادة تعين اللعبة.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
@@ -237,48 +232,49 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="jQuery">jQuery</div>
                       </div>
                       <div class="text-center">
-                        <a href="https://memory-game-jquery.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/memory-game" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://memory-game-jquery.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/memory-game" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/blog.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Blog</h5>
-                      <p class="card-text">Personal blog with categories built with contentful (CMS) for adding content dynamically.</p>
+                      <h5 class="card-title">مدونة</h5>
+                      <p class="card-text">مدونة شخصية مع عدت تصنيفات مبنية عن طريق (contentful) لاضافة المحتوى بشكل ديناميكي.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
-                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>                      </div>
+                        <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>                      
+                      </div>
                       <div class="text-center">
-                        <a href="https://simple-contentful-blog.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/simple-contentful-blog" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://simple-contentful-blog.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/simple-contentful-blog" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/careglass.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Careglass Store</h5>
-                      <p class="card-text">Careglass is a sunglasses store built with contentful (CMS) for adding content dynamically.</p>
+                      <h5 class="card-title">متجر نظارات</h5>
+                      <p class="card-text">متجر نظارات شمسية مبني عن طريق (contentful) لاضافة المنتجات بشكل ديناميكي.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
                     </div>
                       <div class="text-center">
-                        <a href="https://careglass-store.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/careglass" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://careglass-store.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/careglass" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/job-listings.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Job Listings</h5>
-                      <p class="card-text">This is a challenge from frontendmentor.io, it is a job listings with adding and removing fillters.</p>
+                      <h5 class="card-title">قائمة وظائف</h5>
+                      <p class="card-text">هذا تحدي من موقع (frontendmentor.io) لعرض قائمة وضائف على حسب التصنيفات التي يضيفها المستخدم.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
@@ -286,16 +282,16 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="JavaScript">JavaScript</div>
                     </div>
                       <div class="text-center">
-                        <a href="https://static-job-listings-master.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/static-job-listings--master" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://static-job-listings-master.netlify.app/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/static-job-listings--master" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/social-media-dashboard.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Social Media Dashboard</h5>
-                      <p class="card-text">This is a challenge from frontendmentor.io, it is a static social media dashboard with dark mode.</p>
+                      <h5 class="card-title">لوحة عرض احصائيات</h5>
+                      <p class="card-text">هذا تحدي من موقع لعرض (frontendmentor.io) إحصائيات من حسابات التواصل الإجتماعي.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
@@ -303,32 +299,32 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="jQuery">jQuery</div>                   
                      </div>
                       <div class="text-center">
-                        <a href="https://MOHAMMED KHORMI.github.io/social-media-dashboard/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/social-media-dashboard" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://abbasshdev.github.io/social-media-dashboard/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/social-media-dashboard" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/huddle.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Huddle</h5>
-                      <p class="card-text">This is a challenge from frontendmentor.io, it is a responsive landing page with multiple sections.</p>
+                      <h5 class="card-title">هَدل</h5>
+                      <p class="card-text">هذا تحدي من موقع (frontendmentor.io) وهي صفحة موقع متجاوبة مع عدة أقسام.</p>
                       <div class="card-built-with">
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="CSS">CSS</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" data-langTool="Bootstrap">Bootstrap</div>
                      </div>
                       <div class="text-center">
-                        <a href="https://MOHAMMED KHORMI.github.io/huddle-landing-page-with-alternating-feature-blocks-master/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/huddle-landing-page-with-alternating-feature-blocks-master" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://abbasshdev.github.io/huddle-landing-page-with-alternating-feature-blocks-master/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/huddle-landing-page-with-alternating-feature-blocks-master" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/sign-up-form.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Sign-up Page</h5>
-                      <p class="card-text">This is a challenge from frontendmentor.io, sign-up form with validation.</p>
+                      <h5 class="card-title">صفحة تسجيل دخول</h5>
+                      <p class="card-text">هذا تحدي من موقع (frontendmentor.io) ، صفحة تسجيل دخول مع التحقق من البيانات</p>
                       <div class="card-built-with" >
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
@@ -337,16 +333,16 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
                      </div>
                       <div class="text-center">
-                        <a href="https://MOHAMMED KHORMI.github.io/intro-component-with-signup-form-master-by-Abbas-SH-Dev/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/intro-component-with-signup-form-master-by-Abbas-SH-Dev" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://abbasshdev.github.io/intro-component-with-signup-form-master-by-Abbas-SH-Dev/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/intro-component-with-signup-form-master-by-Abbas-SH-Dev" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/grocery-list.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Grocery Lists</h5>
-                      <p class="card-text">This is a grocery lists cart to add, remove groceries item or delete all items.</p>
+                      <h5 class="card-title">قائمة المقاضي</h5>
+                      <p class="card-text">قائمة المقاضي لاضافة وحذف الأصناف من قائمة المشتريات.</p>
                       <div class="card-built-with" >
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
@@ -355,16 +351,16 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
                      </div>
                       <div class="text-center">
-                        <a href="https://MOHAMMED KHORMI.github.io/Grocery-Lists/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/Grocery-Lists" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://abbasshdev.github.io/Grocery-Lists/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/Grocery-Lists" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
                 <div class="card text-left m-4" style="width: 21rem; height: 27rem;">
                     <img src="imgs/discount__calculator.png" class="card-img-top" alt="...">
                     <div class="card-body mb-auto">
-                      <h5 class="card-title">Discount Calculator</h5>
-                      <p class="card-text">Calculator will calculate the discount and show the price before and after the discount.</p>
+                      <h5 class="card-title">حاسبة الخصم</h5>
+                      <p class="card-text">لحساب الخصم وعرض المبلغ المدخل قبل وبعد الخصم.</p>
                       <div class="card-built-with" >
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="HTML">HTML</div>
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="CSS">CSS</div>
@@ -373,8 +369,8 @@
                         <div class="px-2 py-1 ml-0 my-1 mr-1" style="font-size: 9px;" data-langTool="jQuery">jQuery</div>
                      </div>
                       <div class="text-center">
-                        <a href="https://MOHAMMED KHORMI.github.io/Discount__Calculator/" target="_blank" class="btn p-2 m-2 mt-4">Live Demo</a>
-                        <a href="https://github.com/MOHAMMED KHORMI/Discount__Calculator" target="_blank" class="btn p-2 m-2 mt-4">Source Code</a>
+                        <a href="https://abbasshdev.github.io/Discount__Calculator_AR/" target="_blank" class="btn p-2 m-2 mt-4">رابط مباشر</a>
+                        <a href="https://github.com/AbbasShDev/Discount__Calculator_AR" target="_blank" class="btn p-2 m-2 mt-4">الاكواد</a>
                       </div>
                     </div>
                   </div>
@@ -384,23 +380,23 @@
 
       <!-- Start contact -->
       <div id="contact" class="section contact">
-        <h1 class="pb-1 text-center">Contact</h1>
+        <h1 class="pb-1 text-center">تواصل معي</h1>
         <div class="container col-10 col-md-8 col-lg-6 mt-5 mx-auto p-4">
             <form>
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Your Name...">
+                  <label for="name">الإسم</label>
+                  <input type="text" class="form-control" id="name" placeholder="إسمك...">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input type="email" class="form-control" id="email" placeholder="Your Email address...">
+                  <label for="email">الإيميل</label>
+                  <input type="email" class="form-control" id="email" placeholder="إيميلك...">
                 </div>
                 <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" id="message" placeholder="Your Message..."></textarea>
+                  <label for="message">الرسالة</label>
+                  <textarea class="form-control" id="message" placeholder="رسالتك..."></textarea>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="form-control btn p-0" id="Send Message" value="Send Message">
+                    <input type="submit" class="form-control btn p-0" id="Send Message" value="إرسال الرسالة">
                 </div>
               </form>
         </div>
@@ -410,11 +406,11 @@
     <!-- Start find-me  -->
     <div class="find-me ">
         
-            <h1 class="pb-1 mx-auto">find me on<span></span></h1>
+            <h1 class="pb-1 mx-auto">تجدني هنا<span></span></h1>
             
         <div class="">
-            <a href="https://twitter.com/MOHAMMED KHORMI" target="_blank"><i class="mx-2 p-3 fab fa-twitter"></i></a>
-            <a href="https://github.com/MOHAMMED KHORMI" target="_blank"><i class="mx-2 p-3 fab fa-github "></i></a>
+            <a href="https://twitter.com/AbbasShDev" target="_blank"><i class="mx-2 p-3 fab fa-twitter"></i></a>
+            <a href="https://github.com/AbbasShDev" target="_blank"><i class="mx-2 p-3 fab fa-github "></i></a>
             <a href="https://www.linkedin.com/in/abbas-alshaqaq-7b58221a5/" target="_blank"><i class="mx-2 p-3 fab fa-linkedin"></i></a>
           </div>
     </div>
@@ -423,16 +419,16 @@
     <!-- Start Footer  -->
     <div class="footer">  
         <div>
-           © 2020 MOHAMMED KHORMI 
+           © 2020 AbbasShDev 
         </div>
       </div>
       <!-- End Footer  -->
-    <!-- jQuery js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <!-- Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <!-- Bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+     <!-- jQuery js -->
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+     <!-- Popper.js -->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <!-- Bootstrap js -->
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
     <!-- main js -->
     <script src="js/app.js"></script>
 </body>
